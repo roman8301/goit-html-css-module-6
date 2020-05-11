@@ -8,10 +8,13 @@
   --second-font-color: #999999;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  /* outline: 1px solid blue; */
 }
 
 html {
@@ -247,9 +250,7 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  background-clip: padding-box;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   background: linear-gradient(
@@ -285,16 +286,16 @@ a {
   background-color: rgb(252, 227, 138);
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-color 0.2s linear;
+  transition: all 0.2s linear;
 }
 
-.team-img__wrapper:hover .overlay-social {
+.team-list__item:hover .overlay-social {
   visibility: visible;
   opacity: 1;
   box-shadow: 10px 10px var(--nav-color);
 }
 
-.team-img__wrapper:hover {
+.team-list__item:hover .team-img__wrapper {
   transform: translate(-10px, -10px);
 }
 
