@@ -48,7 +48,6 @@ a {
 
 .nav-site {
   font-family: var(--first-font);
-  /* color: var(--nav-color); */
   display: flex;
   align-items: baseline;
   justify-content: space-between;
